@@ -1,4 +1,8 @@
-# MYSQL-CHEATSHEET
+## What is SQL?
+      1. SQL stands for Structured Query Language,which is a conputer language for storing,manipulating 
+         and retrieving data stored in relational databases.
+
+## MYSQL-CHEATSHEET
 
 #### 1. Login to MySQL 
       a. mysql -u root -p
@@ -34,7 +38,7 @@
       a. select database();
       
 #### 12. To display number of tables
-      a. select tables;
+      a. show tables;
       
 #### 13. To display particular table
       a. desc table_name;
@@ -67,8 +71,39 @@
 #### 21. To add primary key contrain to  any column of the table
       a. alter table table_name add primary key (col_name);
       eg. alter table student add primary key (id);
+      
+#### 22. To add Primary Key constrain
+      a. ALTER TABLE table_name ADD PRIMARY KEY(ID);
 
+#### 23. To drop Primary Key constrain
+      a. ALTER TABLE table_name DROP PRIMARY KEY;
+      
+#### 24. To add Foreign Key while creating New table 
+      a.create Table Orders 
+        (OrderID int NOT NULL,
+         OrderNumber int NOT NULL,
+         PersonID int,
+         PRIMARY KEY (OrderID),
+         FOREIGN KEY (PersonId) references Person(ID) 
+         );
+      b. Person Table has been created already   
 
+#### 25. To drop FORIEGN Key constrain
+      a. alter table Orders drop FOREIGN KEY Orders_ibfk_1;
+      
+#### 26. To Add FOREIGN KEY constrain
+      a. alter table Orders add FOREIGN KEY (PersonId) REFERENCES Person(ID);
+      
+#### 27. To start Transaction between tables 
+      a.  start transaction;
+      
+#### 28. To Delete a record from table 
+      a. delete from Person where id=1;
+
+#### 29. To UNDO deletion using rollback 
+      a. rollback;
+
+   
 
 
 
