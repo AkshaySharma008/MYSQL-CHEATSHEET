@@ -1,6 +1,6 @@
 ## What is SQL?
-      1. SQL stands for Structured Query Language,which is a conputer language for storing,manipulating 
-         and retrieving data stored in relational databases.
+   SQL stands for Structured Query Language,which is a conputer language for storing,manipulating 
+   and retrieving data stored in relational databases.
 
 ## MYSQL-CHEATSHEET
 
