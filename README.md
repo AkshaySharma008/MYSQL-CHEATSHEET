@@ -102,6 +102,17 @@
 
 #### 29. To UNDO deletion using rollback 
       a. rollback;
+   
+#### 30. Delete a table
+      a. DROP table table_name;
+      
+#### 31. INTEGRITY-CONSTRAINTS 
+      a. NULL Constraint - NOT NULL (add this while creating table and mention after Col_name)
+            eg. ID int(6) NOT NULL
+      b. UNIQUE COnstraint -
+            eg. ID int(6) UNIQUE
+            ** NOT NULL UNIQUE will behave as PRIMARY KEY
+      c. 
 
    
 
