@@ -127,6 +127,10 @@
       f. DEFAULT constraint
             eg. AGE int DEFAULT 18;
            
+           
+          
+           
+  
             
           
 
