@@ -120,7 +120,8 @@
             - The table which has used that PRIMARY KEY called as CHILD TABLE.
             - This key establishes the MULTIPLE RELATION between them (MUL)
             eg. FOREIGN KEY(C_ID) REFERENCES CUSTOMER(CID));
-           ** If you want to remove the primary key , need to remove the reference key before from child table.
+           ** If you want to remove the primary key , need to remove the reference key before 
+              from child table.
       e. CHECK constraint
             eg. AGE int NOT NULL CHECK (AGE>18)
             - ERROR 3819 (HY000): Check constraint 'Student_chk_1' is violated.
