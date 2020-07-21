@@ -127,8 +127,101 @@
             - ERROR 3819 (HY000): Check constraint 'Student_chk_1' is violated.
       f. DEFAULT constraint
             eg. AGE int DEFAULT 18;
+      g. AUTO INCREMENT
+            eg. S_NO int NOT NULL AUTO_INCREMENT
+            
+#### 32. Comparison Operators
+      a. '=' (equal to),
+      b. '<>' or '!=' (not equal to),
+      c. '>' (greater than),
+      d. '<' (less than),
+      e. '>=' (greater than or equal to),
+      f. '<=' (less than or equal to),
+      eg. SELECT name, quantity FROM products WHERE quantity <= 2000;
+      
+#### 33. String Matching 
+      a. we can perform pattern matching using operator LIKE (or NOT LIKE) with wildcard characters.
+         - The wildcard '_' matches any single character
+         - '%' matches any number of characters (including zero)
+         as,
+         a. 'abc%' matches strings beginning with 'abc';
+         b. '%xyz' matches strings ending with 'xyz';
+         c. '%aaa%' matches strings containing 'aaa';
+         d. '___' matches strings containing exactly three characters; and
+         e. 'a_b%' matches strings beginning with 'a', followed by any single character,
+            followed by 'b', followed by zero or more characters.
+     eg. SELECT name, price FROM products WHERE name LIKE 'PENCIL%’;
+     
+#### 34. Arithmetic and Logical Operators
+       a.   
+            - addition
+            - substraction
+            - multiplication
+            - division
+            - Modulus(Remainder)
+      b.    
+            - AND
+            - OR
+            - NOT
+            - XOR
+      eg. SELECT * FROM products WHERE quantity >= 5000 AND price < 1.24 AND name LIKE 'Pen %’;
+          SELECT * FROM products WHERE NOT (quantity >= 5000 AND name LIKE 'Pen %');
+          
+#### 35. ORDER BY Clause
+      a. Arrange the table in ascending / descending order
+      eg. SELECT * FROM products WHERE name LIKE 'Pen %' ORDER BY price DESC;
+          SELECT * FROM products WHERE name LIKE 'Pen %' ORDER BY price DESC, quantity;
+          
+#### 36. LIMIT Clause
+      -  To display only first two rows
+      eg. SELECT * FROM products ORDER BY price LIMIT 2;
+      
+#### 37. AS-alias
+      - Define these names as to be the display names
+      eq. SELECT productID AS ID, productCode AS Code,name AS Description, price AS `Unit Price`
+         FROM products ORDER BY ID; 
+         ** Use alias ID as reference
+            
+#### 38. CONCAT()
+      - Concatinate two colums into single one and display
+      eg. SELECT CONCAT(productCode, ' - ', name) AS `Product Description`, price FROM products;
+      
+#### 39. DISTINCT
+      - A column may have duplicate values, we could use keyword DISTINCT to select only distinct values.
+        We can also apply DISTINCT to several columns to select distinct combinations of these columns.
+      eg. SELECT DISTINCT price AS `Distinct Price` FROM products;
+      
+#### 40. GROUP BY
+      - The GROUP BY clause allows you to collapse multiple records with a common value into groups
+      eg. SELECT * FROM products GROUP BY productCode;
+            ** Only first record in each group is shown
            
-           
+#### 41. GROUP BY AGGREGATE
+      - we can apply GROUP BY Aggregate functions to each group to produce group summary report.
+      as, 
+         - COUNT
+         - MIN
+         - MAX
+         - AVG
+         - SUM
+         - STD
+         - GROUP_CONCAT
+      eg. SELECT COUNT(*) AS `Count` FROM products;
+            ** Function COUNT(*) returns the number of rows selected
+          SELECT MAX(price), MIN(price), AVG(price), STD(price), SUM(quantity) FROM products;  
+          
+#### 42. UPDATE RECORDS/DATA 
+      - To modify existing data, use UPDATE ... SET command, with the following syntax:
+      eg. UPDATE products SET price = price * 1.1;
+            ** Increase the price by 10% for all products
+          UPDATE products SET quantity = quantity - 100 WHERE name = 'Pen Red';
+            ** Modify selected rows
+         
+#### 43. DELETING ROWS
+      - DELETE FROM tableName    ** to drop table
+      - DELETE FROM tableName WHERE criteria 
+            ** to drop items which satify the criteria
+         
           
            
   
