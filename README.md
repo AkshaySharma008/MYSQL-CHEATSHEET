@@ -221,7 +221,12 @@
       - DELETE FROM tableName    ** to drop table
       - DELETE FROM tableName WHERE criteria 
             ** to drop items which satify the criteria
-         
+            
+#### 44. To get a copy of all the commands in a text file
+      - tee <location of file>
+
+#### 45. to close the text file after all queries
+      - notee
           
            
   
